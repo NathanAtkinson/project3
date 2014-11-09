@@ -1,0 +1,300 @@
+
+html {
+	color: #333;
+	font-family: 'Open Sans', Arial;
+}
+
+* {
+	box-sizing: border-box;
+	color:inherit;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+html, body {
+	height: 100%
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	min-height: 100%;
+}
+
+img {border: 0;}
+
+a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+div.hero {
+		/* radial-gradient allows you to choose a shape, location (optional)
+		and then the colors it should step between.  By having .5 as first color
+		vs .8, the center is more transparent that the edges. */
+	background: 
+		radial-gradient(
+			circle, 
+	      rgba(0, 150, 150, .6), 
+	      rgba(0, 150, 150, .8) 
+	    ), url(/images/bg.jpg);
+	background-size: 100%;
+	/*had background-size: contain, repeated slightly*/
+	/*background-repeat: no-repeat;*/
+}
+
+div.inside-top {
+	/*background-color: lightblue;*/
+	width: 80%;
+	margin: 0 auto;
+}
+
+div.hero > div:first-child {
+	/*background-color: lightblue;*/
+	width: 80%;
+	margin: 0 auto;
+}
+
+
+
+div.header {
+	/*	background-color: yellow;*/
+	min-height: 150px;
+	position: relative;
+}
+
+div.logo {
+	/*background-color: red;*/
+	display: inline-block;
+	margin: 5px;
+	padding: 5px;
+	color: white;
+	font-family: lobster;
+	font-size: 40px;
+}
+
+div.search {
+	/*background-color: black;*/
+	padding: 2px;
+	display: inline-block;
+	position: absolute;
+	right: 5px;
+	top: 10px;
+}
+
+div.search > input {
+	background-color: rgba(0, 0, 0, 0);
+	border: 1px solid rgba(200, 200, 200, .7);
+}
+
+div.search > button {
+	background-color: #F04B06;
+	color: white;
+	border: none;
+}
+
+div.navbar {
+	/*background-color: orange;*/
+	padding: 2px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-top: 1px solid rgba(200, 200, 200, .7);
+	border-bottom: 1px solid rgba(200, 200, 200, .7);
+}
+
+div.navbar > nav {
+	text-align: center;
+	/*background-color: green;*/
+	padding: 5px;
+}
+
+div.navbar a {
+	/*	background-color: blue;*/
+	padding: 5px 15px;
+	display: inline-block;
+	margin: 5px 10px;
+	text-decoration: none;
+	font-size: 1em;
+	font-weight: 700;
+}
+
+div.hero div.content {
+	text-align: center;
+	/*background-color: rgba(200, 200, 200, .8);*/
+	position: relative;
+	min-height: 400px;
+}
+
+div.hero div.content > div {
+	position: absolute;
+	bottom: 30px;
+	/*background-color: #333;*/
+	color: white;
+	width: 100%;
+	padding: 35px;
+}
+
+div.content > div > h1 {
+	font-size: 3em;
+	font-weight: 300;
+}
+
+div.content h1 > span {
+	font-weight: 900;
+}
+
+div.main {
+	background-color: #D7E1E7;
+}
+
+
+div.main > div {
+	width: 80%;
+	margin: 0 auto;
+	background-color: white;
+}
+
+/* had to set bg color for the below.  Tried to make it
+more specific to 'override' div.main > div but wouldn't
+work */
+div.main > div.breakouts {
+	/*	background-color: orange;*/
+	text-align: center;
+	vertical-align: top;
+	width: 80%;
+	margin: 0 auto;
+	background-color: inherit;
+}
+
+/* when one of the breakouts is multiple lines long
+messed up the transform:translate...?!? 
+--vertical-align: top fixed the issue if one 
+of the breakouts had more text than the others*/
+div.breakout {
+	width: 30%;
+	min-height: 175px;
+	background-color: white;
+	display: inline-block;
+	transform:translateY(-20px);
+	margin: 0 10px;
+	padding: 5px;
+	border-top: 5px solid #E84D14;
+	vertical-align: top;
+}
+
+div.breakout.help button {
+	color: #E84D14;
+	background-color: rgba(0, 0, 0, .0);
+	border: 1px solid #E84D14;
+	border-radius: 5px;
+}
+/* would change b1, b2 to feeding dogs, etc.  or use nth-child */
+div.breakout.food {
+	border-top: 5px solid rgb(150, 210, 82);
+}
+
+div.breakout.food button {
+	color: rgb(150, 210, 82);
+	background-color: rgba(0, 0, 0, .0);
+	border: 1px solid rgb(150, 210, 82);
+	border-radius: 5px;
+}
+
+div.breakout.chinese {
+	border-top: 5px solid rgb(100, 180, 220);
+}
+
+div.breakout.chinese button {
+	color: rgb(100, 180, 220);
+	background-color: rgba(0, 0, 0, .0);
+	border: 1px solid rgb(100, 180, 220);
+	border-radius: 5px;
+}
+
+
+
+div.list {
+/*	background-color: red;*/
+	width: 50%;
+	display: inline-block;
+	float: left;
+	margin-bottom: 100px;
+}
+
+div.list > div.item {
+	background-color: #E8F3F9;
+/*	color: #A9CAFF;*/
+	margin: 10px;
+	background-image: url(/images/dog1.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	min-height: 75px;
+	display: block;
+}
+
+div.list > div.item.dog2 {
+	background-image: url(/images/dog2.png);
+}
+
+div.list > div.item.dog3 {
+	background-image: url(/images/dog3.png);
+}
+
+div.list div.item h1 {
+	margin-left: 90px;
+	color: #99C0E5;
+	padding: 3px;
+}
+
+div.item > p {
+	margin-left: 95px;
+/*	background-color: yellow;*/
+}
+
+div.tiles {
+	display: inline-block;
+	/*background-color: blue;*/
+	width: 50%;
+}
+
+div.tile {
+	display: inline-block;
+	width: 28%;
+	min-height: 240px;
+	background-color: #E3EFD6;
+	margin: 10px;
+	background-image: url(/images/dog1.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	vertical-align: top;
+	color: rgb(100, 140, 30);
+}
+
+div.tile > h4 {
+	margin: 130px 0 0 0;
+	background-color: #8ECF41;
+	padding: 5px;
+}
+
+div.tile.dog2 {
+	background-image: url(/images/dog2.png);
+	/*display: inline-block;*/
+}
+
+div.tile.dog3 {
+	background-image: url(/images/dog3.png);
+}
+
+div.tile > p {
+	/* even with the reset, the p tag still had
+	a margin on the bottom*/
+	background-color: #E3EFD6;
+	display: block;
+}
+
+.shadow {
+	box-shadow: 0px 0px 10px #555;
+}
